@@ -1,0 +1,3 @@
+ALTER TABLE `jm_blr_rs_upavasathi`
+    MODIFY COLUMN `name` VARCHAR(255) NOT NULL,
+    MODIFY COLUMN `name_kn` VARCHAR(255) NOT NULL;

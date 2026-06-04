@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1125px" height="1058px" viewBox="0 0 1125 1058" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>z</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="324" y="490" width="321" height="321"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="321" height="321" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="capacitive" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="z">
+            <g id="Group-2-Copy-2" transform="translate(118.000000, 90.000000)">
+                <path d="M283,42.537797 L283,347.462203 C283,370.95518 305.60962,390 333.5,390 C361.39038,390 384,370.95518 384,347.462203 L384,42.537797 C384,19.0448204 361.39038,0 333.5,0 C305.60962,0 283,19.0448204 283,42.537797 Z" id="Line" fill="#F7D9C6" fill-rule="nonzero"></path>
+                <rect id="Rectangle-6" fill="#F7D8C6" x="0" y="222" width="384" height="219" rx="45"></rect>
+            </g>
+            <circle id="Oval-5" fill="#F6A623" cx="658" cy="465" r="196"></circle>
+            <use id="Rectangle" stroke="#979797" mask="url(#mask-2)" stroke-width="2" fill="#E7524B" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>
