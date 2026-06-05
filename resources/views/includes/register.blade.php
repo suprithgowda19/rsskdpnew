@@ -18,6 +18,9 @@
     .form-control[readonly] {
         background-color: #e9ecef00 !important;
     }
+    span.select2-selection.select2-selection--multiple {
+        height: auto !important;
+    }
 
 </style>
 
@@ -114,10 +117,10 @@
                 <label for="form8" class="color-highlight">{{ __('messages.regform4') }} (Required)</label>
             </div>
 
-            <div class="input-style input-style-always-active has-borders no-icon validate-field mb-4">
+            {{--<div class="input-style input-style-always-active has-borders no-icon validate-field mb-4">
                 <input type="text" class="form-control validate-text "  placeholder="{{ __('messages.regform5') }}" name="doy"  required>
                 <label for="date2" class="color-highlight">{{ __('messages.regform5') }} (Required)</label>
-            </div>
+            </div>--}}
 
             <div class="input-style input-style-always-active has-borders no-icon validate-field mb-4">
                 <input type="number" class="form-control validate-text pin" id="form9" placeholder="{{ __('messages.regform6') }}" name="pin" >
@@ -126,12 +129,12 @@
                 <i class="fa fa-check disabled valid color-green-dark"></i>
             </div>
 
-            <div class="input-style input-style-always-active has-borders no-icon validate-field mb-4">
+            {{--<div class="input-style input-style-always-active has-borders no-icon validate-field mb-4">
                 <input type="text" class="form-control validate-text grama" id="form10" placeholder="{{ __('messages.regform7') }}" name="grama" >
                 <label for="form10  " class="color-highlight">{{ __('messages.regform7') }} (Optional)</label>
                 <i class="fa fa-times disabled invalid color-red-dark"></i>
                 <i class="fa fa-check disabled valid color-green-dark"></i>
-            </div>
+            </div>--}}
 
             <div class="input-style input-style-always-active has-borders no-icon mb-4">
                 <textarea id="form4" class="form-control" placeholder="{{ __('messages.regform8') }}" name="address" required></textarea>
@@ -140,18 +143,18 @@
                 <i class="fa fa-check disabled valid color-green-dark"></i>
             </div>
 
-            <div class="col-md-12 input-style-always-active has-borders no-icon mb-4" style="position: relative;margin-bottom: 15px !important;">
+            {{--<div class="col-md-12 input-style-always-active has-borders no-icon mb-4" style="position: relative;margin-bottom: 15px !important;">
                 <label for="intrarea" class="color-highlight profess-tag">{{ __('messages.regform9') }} (Optional)</label>
                 <select  multiple class="form-select intrarea profess-tag-1" name="intrarea[]" data-placeholder="{{ __('messages.regsearch') }}"  style="border-color: rgba(0, 0, 0, 0.08) !important;">
                 </select>
-            </div>
+            </div>--}}
 
-            <div class="col-md-12 input-style-always-active has-borders no-icon mb-4" style="position: relative;margin-bottom: 15px !important;">
+            {{--<div class="col-md-12 input-style-always-active has-borders no-icon mb-4" style="position: relative;margin-bottom: 15px !important;">
                 <label for="jag" class="color-highlight profess-tag">{{ __('messages.regform16') }} (Optional)</label>
                 <select  multiple class="form-select jag profess-tag-1" id="jag" name="jag[]" data-placeholder="{{ __('messages.regsearch') }}"  style="border-color: rgba(0, 0, 0, 0.08) !important;">
                 </select>
 
-            </div>
+            </div>--}}
 
             <div class="col-md-12 input-style-always-active has-borders no-icon mb-4" style="position: relative;margin-bottom: 15px !important;">
                 <label for="prof" class="color-highlight profess-tag">{{ __('messages.regform10') }} (Required)</label>
@@ -292,7 +295,7 @@
         });
         $(".city").select2({
             placeholder: "Select",
-            tags: true,
+            tags: false,
             minimumResultsForSearch: Infinity
 
         });
@@ -424,12 +427,14 @@
                 else
                 {
                     $(".city").html('');
-                    $(".city").append("<option label='Please Select' value=''>Select any one</option>");
                     $.each(data, function(i, item)
                     {
-                        $(".city").append("<option value="+item.id+">"+item.name+" - "+item.name_kn+"</option>");      
+                        if(item.name.trim().toUpperCase() === 'BANGALORE DAKSHIN')
+                        {
+                            $(".city").append("<option selected value="+item.id+">"+item.name+" - "+item.name_kn+"</option>");
+                        }
                     });
-                    
+                    $(".city").trigger('change');
                 }
             }
         });
@@ -764,4 +769,4 @@
     });
 </script>
 
-@endsection 
+@endsection

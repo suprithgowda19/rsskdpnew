@@ -22,7 +22,7 @@ class VasathiExport implements FromCollection , WithHeadings
     public function collection()
     {
         $list =  DB::table('customers')
-        ->select('customers.reg_id','customers.username','customers.phone','customers.email','customers.pin','customers.grama', 'customers.address','pwa_intre_area.name as interest','pwa_jagrithi.name as jagrithi','pwa_category.name as career', 'pwa_subcategory.name as careersub', 'customers.doy','customers.yod','pwa_responsibility.name as javb', 'pwa_responsibility_sub.name as javbviv', 'jm_blr_rs_vasathi.name as vname', 'jm_blr_rs_upavasathi.name as upavasathi_name', 'jm_blr_rs_nagar.name as nname', 'jm_blr_rs_bhag.name as bname', 'jm_blr_rs_vibhag.name as vibname','customers.created_at')
+        ->select('customers.reg_id','customers.username','customers.phone','customers.email','customers.pin', 'customers.address','pwa_category.name as career', 'pwa_subcategory.name as careersub', 'customers.yod','pwa_responsibility.name as javb', 'pwa_responsibility_sub.name as javbviv', 'jm_blr_rs_vasathi.name as vname', 'jm_blr_rs_upavasathi.name as upavasathi_name', 'jm_blr_rs_nagar.name as nname', 'jm_blr_rs_bhag.name as bname', 'jm_blr_rs_vibhag.name as vibname','customers.created_at')
         ->leftJoin('jm_blr_rs_vasathi', 'customers.area', '=', 'jm_blr_rs_vasathi.id')
         ->leftJoin('jm_blr_rs_upavasathi', 'customers.upavasathi', '=', 'jm_blr_rs_upavasathi.id')
         ->leftJoin('jm_blr_rs_nagar', 'customers.taluk', '=', 'jm_blr_rs_nagar.id')
@@ -43,7 +43,7 @@ class VasathiExport implements FromCollection , WithHeadings
     public function headings():array
     {
         return [
-            'Registration id', 'Name', 'Phone', 'Email', 'Pincode', 'Grama', 'Address', 'Intrest area',
-            'Jagrithi', 'Career', 'Career Sub', 'Sangha Praveesha Year', 'Year of Birth', 'Javabdari', 'Vividhakshetra', 'Vasathi', 'Upavasathi', 'Nagar', 'Bhag', 'Vibhag', 'Created_at'];
+            'Registration id', 'Name', 'Phone', 'Email', 'Pincode', 'Address',
+            'Career', 'Career Sub', 'Year of Birth', 'Javabdari', 'Vividhakshetra', 'Vasathi', 'Upavasathi', 'Nagar', 'Bhag', 'Vibhag', 'Created_at'];
         } 
     }
