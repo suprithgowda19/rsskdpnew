@@ -59,10 +59,6 @@
         </div>
 
         <div id="footer-bar" class="footer-bar-5">
-            <a href="{{ route('maintanence') }}">
-                <i data-feather="settings" data-feather-line="1" data-feather-size="21" data-feather-color="brown-dark" data-feather-bg="brown-fade-light"></i>
-                <span>{{ __('messages.menu2') }}</span>
-            </a>
             <a href="{{ route('resources.list')}}">
                 <i data-feather="heart" data-feather-line="1" data-feather-size="21" data-feather-color="green-dark" data-feather-bg="green-fade-light"></i>
                 <span>{{ __('messages.menu3') }}</span>
@@ -71,21 +67,6 @@
                 <i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue-dark" data-feather-bg="blue-fade-light"></i>
                 <span>{{ __('messages.menu1') }}</span>
             </a>
-            <a href="{{ route('maintanence')}}">
-                <i data-feather="globe" data-feather-line="1" data-feather-size="21" data-feather-color="dark-dark" data-feather-bg="gray-fade-light"></i>
-                <span>{{ __('messages.menu4') }}</span>
-            </a>
-            @if(Route::currentRouteName()== 'ssv.home' || Route::currentRouteName()== 'ssv.register' || Route::currentRouteName()== 'ssv.checkstatus')
-             <a href="{{ route('maintanence')}}">
-                <i data-feather="file" data-feather-line="1" data-feather-size="21" data-feather-color="red-dark" data-feather-bg="red-fade-light"></i>
-                <span>Report</span>
-            </a>
-            @else
-            <a href="{{ route('maintanence')}}">
-                <i data-feather="file" data-feather-line="1" data-feather-size="21" data-feather-color="red-dark" data-feather-bg="red-fade-light"></i>
-                <span>{{ __('messages.menu5') }}</span>
-            </a>
-            @endif
             
         </div>
 

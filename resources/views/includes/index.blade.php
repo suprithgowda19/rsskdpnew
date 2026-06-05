@@ -59,13 +59,9 @@
 
 <div class="content mt-0">
     <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             <a href="{{ route('register')}}" class="btn btn-full btn-m rounded-s text-uppercase font-900 shadow-xl bg-highlight">{{ __('messages.indexbutton1') }}</a>
         </div>
-        <div class="col-6">
-            <a href="{{ route('checkstatus')}}" class="btn btn-full btn-border btn-m rounded-s text-uppercase font-900 shadow-l border-highlight color-highlight">{{ __('messages.indexbutton2') }}</a>
-        </div>
-        
     </div>
 </div>
 
